@@ -13,13 +13,17 @@ export const GitHubProvider = ({children}) => {
         const params = new URLSearchParams({
             q: text
         })
-        const response = await fetch(`https://api.github.com/search/users?${params}`
-            , {
-                headers: {
-                    Authorization: `token ${process.env.GITHUB_PERSONAL_ACCESS_TOKEN}`,
-                },
+        const response = await fetch(`https://api.github.com/search/users?${params}`, headers => {
+            if(process.env.GitHubAPItoken && process.env.GitHubAPItoken !== '') {
+                headers = {
+                    headers: {
+                        Authorization: `token ${process.env.GitHubAPItoken}`
+                    }
+                }
+            } else {
+                headers = ''
             }
-        )
+        })
         const {items} = await response.json()
         dispatch({
             type: 'GET_USERS',
