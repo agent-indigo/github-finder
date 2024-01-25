@@ -1,13 +1,15 @@
 import { useState, useContext } from "react"
 import GitHubContext from '../../context/github/GitHubContext'
+import AlertContext from '../../context/alert/AlertContext'
 function UserSearch() {
   const [text, setText] = useState('')
   const {users, searchUsers, clearUsers} = useContext(GitHubContext)
+  const {setAlert} = useContext(AlertContext)
   const handleChange = event => setText(event.target.value)
   const handleSubmit = event => {
     event.preventDefault()
     if(text === '') {
-      alert('No search query entered.')
+      setAlert('No search query entered.', 'error')
     } else {
       searchUsers(text)
       setText('')
@@ -21,7 +23,7 @@ function UserSearch() {
             <div className="relative">
               <input
                 type="text"
-                className="w-full pr-40 input input-lg"
+                className="w-full pr-40 outline input input-lg"
                 placeholder="Search"
                 value={text}
                 onChange={handleChange}
