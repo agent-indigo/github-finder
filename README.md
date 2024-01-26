@@ -11,3 +11,5 @@ I made the following modifications:
 - Added a favicon
 
 - Other minor modifications
+
+- Bug fixes
