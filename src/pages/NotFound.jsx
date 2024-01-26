@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet"
 import { FaHome } from "react-icons/fa"
 import { Link } from "react-router-dom"
-
-function NotFound() {
+const NotFound = () => {
   return (
+    <>
+    <Helmet>
+      <title>Not Found | GitHub Finder</title>
+    </Helmet>
     <div className="hero">
       <div className="text-center hero-content">
         <div className="max-w-lg">
@@ -15,6 +19,7 @@ function NotFound() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 export default NotFound

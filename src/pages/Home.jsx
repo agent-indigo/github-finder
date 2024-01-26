@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet"
 import UserResults from "../components/users/UserResults"
 import UserSearch from "../components/users/UserSearch"
-function Home() {
+const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>GitHub Finder</title>
+      </Helmet>
       <UserSearch/>
       <UserResults/>
     </>

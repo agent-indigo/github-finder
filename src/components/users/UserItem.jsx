@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-function UserItem({ user: { login, avatar_url } }) {
+const UserItem = ({ user: { login, avatar_url } }) => {
   return (
     <div className='card shadow-md compact side bg-base-100'>
       <div className="flex-row items-center space-x-4 card-body">

@@ -1,6 +1,6 @@
 import {FaEye, FaInfo, FaStar, FaUtensils, FaLink} from 'react-icons/fa'
 import PropTypes from 'prop-types'
-function RepoItem({repo}) {
+const RepoItem = ({repo}) => {
     const {
         name,
         description,

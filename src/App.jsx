@@ -9,7 +9,7 @@ import { GitHubProvider } from './context/github/GitHubContext'
 import { AlertProvider } from './context/alert/AlertContext'
 import Alert from './components/layout/Alert'
 import User from './pages/User'
-function App() {
+const App = () => {
   return (
     <GitHubProvider>
       <AlertProvider>

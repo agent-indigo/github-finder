@@ -1,5 +1,5 @@
 import spinner from './assets/spinner.gif'
-function Spinner() {
+const Spinner = () => {
   return (
     <div className='w-100 mt-20'>
         <img

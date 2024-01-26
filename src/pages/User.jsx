@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import {FaCodepen, FaStore, FaUserFriends, FaUsers} from 'react-icons/fa'
 import { useEffect, useContext } from "react"
 import { Link, useParams } from "react-router-dom"
@@ -5,7 +6,7 @@ import Spinner from '../components/layout/Spinner'
 import GitHubContext from "../context/github/GitHubContext"
 import RepoList from '../components/repos/RepoList'
 import { getUserAndRepos } from '../context/github/GitHubActions'
-function User() {
+const User = () => {
     const {user, loading, repos, dispatch} = useContext(GitHubContext)
     const params = useParams()
     useEffect(() => {
@@ -40,6 +41,9 @@ function User() {
     }
   return (
     <>
+      <Helmet>
+        <title>User Profile | GitHub Finder</title>
+      </Helmet>
       <div className="w-full mx-auto lg:w-10/12">
         <div className="mb-4">
             <Link to='/' className='btn btn-ghost'>
