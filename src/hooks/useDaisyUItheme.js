@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 const useDaisyUItheme = defaultTheme => {
   if (!defaultTheme) {
     defaultTheme = 'light'

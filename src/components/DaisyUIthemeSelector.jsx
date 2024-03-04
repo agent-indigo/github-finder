@@ -1,5 +1,5 @@
 import useDaisyUItheme from '../hooks/useDaisyUItheme'
-const DaisyUIthemeSelector = ({ defaultTheme }) => {
+const DaisyUIthemeSelector = ({defaultTheme}) => {
   const { theme, handleThemeChange } = useDaisyUItheme(defaultTheme.toLowerCase())
   return (
     <div>

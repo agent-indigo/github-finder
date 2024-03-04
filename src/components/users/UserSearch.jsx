@@ -1,4 +1,4 @@
-import { useState, useContext } from "react"
+import {useState, useContext} from "react"
 import GitHubContext from '../../context/github/GitHubContext'
 import AlertContext from '../../context/alert/AlertContext'
 import {searchUsers} from '../../context/github/GitHubActions'
