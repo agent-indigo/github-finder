@@ -1,8 +1,5 @@
 import {useEffect, useState} from 'react'
-const useDaisyUItheme = defaultTheme => {
-  if (!defaultTheme) {
-    defaultTheme = 'light'
-  }
+const useDaisyUItheme = (defaultTheme = 'light') => {
   const [theme, setTheme] = useState(defaultTheme)
   const handleThemeChange = event => {
     setTheme(event.target.value)
