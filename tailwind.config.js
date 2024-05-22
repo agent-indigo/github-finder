@@ -1,8 +1,5 @@
-/** 
- * @type {import('tailwindcss').Config} 
- */
-const config =  {
-  content: ["./src/**/*.jsx"],
+const tailwindConfig =  {
+  content: ['**/*.jsx'],
   plugins: [require('daisyui')],
   daisyui: {
     themes: [
@@ -41,4 +38,4 @@ const config =  {
     ]
   }
 }
-export default config
+export default tailwindConfig
